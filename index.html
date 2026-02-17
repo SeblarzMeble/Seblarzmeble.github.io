@@ -1,210 +1,330 @@
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <title>Meble na wymiar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background-color: #f9f9f9;
-        }
-        header {
-            background: #2c3e50;
-            color: white;
-            padding: 60px 20px;
-            text-align: center;
-        }
-        header h1 {
-            margin: 0;
-            font-size: 2.5em;
-        }
-        header p {
-            font-size: 1.2em;
-            margin-top: 10px;
-        }
-        .btn {
-            display: inline-block;
-            padding: 15px 30px;
-            background: #27ae60;
-            color: white;
-            text-decoration: none;
-            font-weight: bold;
-            margin-top: 20px;
-            border-radius: 5px;
-        }
-        section {
-            max-width: 1000px;
-            margin: 40px auto;
-            padding: 20px;
-            background: white;
-            border-radius: 8px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
-        }
-        h2 {
-            color: #2c3e50;
-            margin-top: 0;
-        }
-        .gallery {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-        }
-        .gallery img {
-            width: calc(33% - 20px);
-            border-radius: 5px;
-        }
-        footer {
-            background: #2c3e50;
-            color: white;
-            text-align: center;
-            padding: 30px 20px;
-            margin-top: 40px;
-        }
-        @media(max-width: 768px){
-            .gallery img {
-                width: calc(50% - 20px);
-            }
-        }
-        @media(max-width: 480px){
-            .gallery img {
-                width: 100%;
-            }
-        }
-    </style>
+@@ -4,219 +4,132 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEBLARZ – Meble na wymiar</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c59d5f;
+}
+
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #c59d5f;
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a67c3b;
+}
+
+.section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.section h3 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background: #c59d5f;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #a67c3b;
+}
+
+@media(max-width: 768px) {
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
+body{background:#f8f8f8;color:#222;}
+header{background:#111;color:#fff;padding:20px 8%;display:flex;justify-content:space-between;align-items:center;}
+header h1{font-size:24px;}
+header a{color:#fff;text-decoration:none;margin-left:20px;font-weight:500;}
+.hero{
+background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1505691723518-36a5ac3be353');
+background-size:cover;
+background-position:center;
+color:#fff;
+text-align:center;
+padding:120px 20px;
+}
+.hero h2{font-size:48px;margin-bottom:20px;}
+.hero p{font-size:20px;margin-bottom:30px;}
+.btn{
+background:#c49b63;
+color:#fff;
+padding:15px 30px;
+border:none;
+border-radius:5px;
+text-decoration:none;
+font-weight:600;
+}
+section{padding:80px 8%;}
+.section-title{text-align:center;font-size:36px;margin-bottom:50px;}
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:30px;
+}
+.card{
+background:#fff;
+padding:30px;
+border-radius:10px;
+box-shadow:0 5px 20px rgba(0,0,0,.05);
+text-align:center;
+}
+.card h3{margin-bottom:15px;}
+.gallery img{
+width:100%;
+border-radius:10px;
+}
+.contact{
+background:#111;
+color:#fff;
+text-align:center;
+}
+.contact a{
+color:#fff;
+background:#c49b63;
+padding:15px 30px;
+border-radius:5px;
+text-decoration:none;
+display:inline-block;
+margin-top:20px;
+}
+footer{
+background:#000;
+color:#aaa;
+text-align:center;
+padding:20px;
+font-size:14px;
+}
+@media(max-width:768px){
+.hero h2{font-size:32px;}
+}
+</style>
 </head>
+
 <body>
 
 <header>
-    <h1>Meble na wymiar</h1>
-    <p>Kuchnie • Szafy • Garderoby • Zabudowy</p>
-    <a href="#kontakt" class="btn">Zadzwoń teraz</a>
+    <h1>SEBLARZ</h1>
+    <nav>
+        <a href="#home">Start</a>
+        <a href="#services">Oferta</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+<h1>SEBLARZ</h1>
+<nav>
+<a href="#oferta">Oferta</a>
+<a href="#galeria">Galeria</a>
+<a href="#kontakt">Kontakt</a>
+</nav>
 </header>
 
-<section>
-    <h2>O naszej firmie</h2>
-    <p>Tworzymy meble na wymiar dopasowane do Twoich potrzeb. Stawiamy na jakość wykonania, trwałe materiały i indywidualne podejście do klienta. Działamy w Twoim mieście i okolicach, oferując profesjonalne doradztwo i montaż.</p>
-</section>
-
-<section>
-    <h2>Nasza oferta</h2>
-    <ul>
-        <li>Kuchnie na wymiar</li>
-        <li>Szafy przesuwne</li>
-        <li>Garderoby</li>
-        <li>Meble łazienkowe</li>
-        <li>Zabudowy biurowe</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Galeria realizacji</h2>
-    <div class="gallery">
-        <img src="kuchnia1.jpg" alt="Kuchnia 1">
-        <img src="kuchnia2.jpg" alt="Kuchnia 2">
-        <img src="kuchnia3.jpg" alt="Kuchnia 3">
-        <!-- Dodaj kolejne zdjęcia jeśli chcesz -->
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h2>Meble na wymiar tworzone z pasją</h2>
+        <p>Kuchnie • Szafy • Garderoby • Zabudowy</p>
+        <a href="#contact" class="btn">Bezpłatna wycena</a>
     </div>
+<section class="hero">
+<h2>Meble na wymiar premium</h2>
+<p>Kuchnie • Szafy • Garderoby • Zabudowy</p>
+<a href="tel:574717941" class="btn">Zadzwoń: 574 717 941</a>
 </section>
 
-<section id="opinie">
-    <h2>Opinie klientów</h2>
-    <p>„Profesjonalna firma, świetna jakość mebli, montaż bez problemów!” – Anna K.</p>
-    <p>„Polecam! Kuchnia wygląda dokładnie tak, jak chciałem.” – Marek P.</p>
-    <p>„Szybko i solidnie. Bardzo dobry kontakt z klientem.” – Katarzyna S.</p>
+<section id="oferta">
+<h2 class="section-title">Nasza Oferta</h2>
+<div class="grid">
+<div class="card">
+<h3>Kuchnie na wymiar</h3>
+<p>Nowoczesne i klasyczne projekty dopasowane do Twojej przestrzeni.</p>
+</div>
+<div class="card">
+<h3>Szafy i garderoby</h3>
+<p>Funkcjonalne zabudowy z maksymalnym wykorzystaniem przestrzeni.</p>
+</div>
+<div class="card">
+<h3>Meble biurowe</h3>
+<p>Ergonomiczne rozwiązania do biura i home office.</p>
+</div>
+</div>
 </section>
 
-<section id="kontakt">
-    <h2>Kontakt</h2>
-    <p><strong>Telefon:</strong> 574 717 941</p>
-    <p><strong>Email:</strong> kontakt@twojafirma.pl</p>
-    <p><strong>Obszar działania:</strong> Twoje miasto i okolice</p>
-    <a href="tel:574717941" class="btn">Zadzwoń teraz</a>
-    <a href="mailto:kontakt@twojafirma.pl" class="btn">Napisz email</a>
+<section class="section" id="services">
+    <h3>Nasza Oferta</h3>
+    <div class="services">
+        <div class="card">
+            <h4>Kuchnie na wymiar</h4>
+            <p>Projekt i realizacja funkcjonalnych oraz nowoczesnych kuchni.</p>
+        </div>
+        <div class="card">
+            <h4>Szafy i garderoby</h4>
+            <p>Indywidualne rozwiązania dopasowane do Twojej przestrzeni.</p>
+        </div>
+        <div class="card">
+            <h4>Zabudowy wnętrz</h4>
+            <p>Meble do salonu, łazienki, biura oraz innych pomieszczeń.</p>
+        </div>
+    </div>
+<section id="galeria">
+<h2 class="section-title">Realizacje</h2>
+<div class="grid gallery">
+<img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c">
+<img src="https://images.unsplash.com/photo-1616627453627-9b5a2e9b8d16">
+<img src="https://images.unsplash.com/photo-1595526114035-0d45ed16cfbf">
+</div>
+</section>
+
+<section class="section" id="contact">
+    <h3>Skontaktuj się z nami</h3>
+    <form class="contact-form">
+        <input type="text" placeholder="Imię i nazwisko" required>
+        <input type="email" placeholder="Adres e-mail" required>
+        <textarea rows="5" placeholder="Opisz swój projekt"></textarea>
+        <button type="submit">Wyślij zapytanie</button>
+    </form>
+<section id="kontakt" class="contact">
+<h2 class="section-title">Kontakt</h2>
+<p>Skontaktuj się z nami i otrzymaj darmową wycenę.</p>
+<a href="tel:574717941">📞 574 717 941</a>
+<p style="margin-top:20px;">SEBLARZ meble na wymiar Sebastian Mróz</p>
 </section>
 
 <footer>
-    © 2026 Meble na wymiar
+    <p>© 2026 SEBLARZ meble na wymiar Sebastian Mróz | Wszelkie prawa zastrzeżone</p>
+© 2026 SEBLARZ meble na wymiar | Wszelkie prawa zastrzeżone
 </footer>
 
 </body>
-</html>
-Wysłano
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <title>Meble na wymiar</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <style>
-        body { margin:0; font-family: Arial,sans-serif; background:#f9f9f9; }
-        header { background:#2c3e50; color:white; padding:60px 20px; text-align:center; }
-        header h1 { margin:0; font-size:2.5em; }
-        header p { font-size:1.2em; margin-top:10px; }
-        .btn { display:inline-block; padding:15px 30px; background:#27ae60; color:white; text-decoration:none; font-weight:bold; margin-top:20px; border-radius:5px; }
-        section { max-width:1000px; margin:40px auto; padding:20px; background:white; border-radius:8px; box-shadow:0 4px 10px rgba(0,0,0,0.05); }
-        h2 { color:#2c3e50; margin-top:0; }
-        .gallery { display:flex; flex-wrap:wrap; gap:20px; }
-        .gallery img { width:calc(33% - 20px); border-radius:5px; }
-        footer { background:#2c3e50; color:white; text-align:center; padding:30px 20px; margin-top:40px; }
-        @media(max-width:768px){ .gallery img { width:calc(50% - 20px); } }
-        @media(max-width:480px){ .gallery img { width:100%; } }
-    </style>
-</head>
-<body>
-
-<header>
-    <h1>Meble na wymiar</h1>
-    <p>Kuchnie • Szafy • Garderoby • Zabudowy</p>
-    <a href="#kontakt" class="btn">Zadzwoń teraz</a>
-</header>
-
-<section>
-    <h2>O naszej firmie</h2>
-    <p>Tworzymy meble na wymiar dopasowane do Twoich potrzeb. Stawiamy na jakość wykonania, trwałe materiały i indywidualne podejście do klienta. Działamy w Twoim mieście i okolicach, oferując profesjonalne doradztwo i montaż.</p>
-</section>
-
-<section>
-    <h2>Nasza oferta</h2>
-    <ul>
-        <li>Kuchnie na wymiar</li>
-        <li>Szafy przesuwne</li>
-        <li>Garderoby</li>
-        <li>Meble łazienkowe</li>
-        <li>Zabudowy biurowe</li>
-    </ul>
-</section>
-
-<section>
-    <h2>Galeria realizacji</h2>
-    <div class="gallery">
-        <img src="kuchnia1.jpg" alt="Kuchnia 1">
-        <img src="kuchnia2.jpg" alt="Kuchnia 2">
-        <img src="kuchnia3.jpg" alt="Kuchnia 3">
-    </div>
-</section>
-
-<section id="opinie">
-    <h2>Opinie klientów</h2>
-    <p>„Profesjonalna firma, świetna jakość mebli, montaż bez problemów!” – Anna K.</p>
-    <p>„Polecam! Kuchnia wygląda dokładnie tak, jak chciałem.” – Marek P.</p>
-    <p>„Szybko i solidnie. Bardzo dobry kontakt z klientem.” – Katarzyna S.</p>
-</section>
-
-<section id="kontakt">
-    <h2>Kontakt</h2>
-    <p><strong>Telefon:</strong> 574 717 941</p>
-    <p><strong>Email:</strong> kontakt@twojafirma.pl</p>
-    <p><strong>Obszar działania:</strong> Twoje miasto i okolice</p>
-    <a href="tel:574717941" class="btn">Zadzwoń teraz</a>
-    <a href="mailto:kontakt@twojafirma.pl" class="btn">Napisz email</a>
-</section>
-
-<footer>
-    © 2026 Meble na wymiar
-</footer>
-
-</body>
-</html>
-
