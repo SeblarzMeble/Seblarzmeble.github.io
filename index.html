@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SEBLARZ – Meble na wymiar</title>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body {
+    background: #f5f5f5;
+    color: #333;
+}
+
+header {
+    background: #111;
+    color: white;
+    padding: 20px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header h1 {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #c59d5f;
+}
+
+.hero {
+    height: 90vh;
+    background: url('https://images.unsplash.com/photo-1505691938895-1758d7feb511') center/cover no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h2 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.btn {
+    background: #c59d5f;
+    padding: 12px 30px;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: #a67c3b;
+}
+
+.section {
+    padding: 80px 5%;
+    text-align: center;
+}
+
+.section h3 {
+    font-size: 32px;
+    margin-bottom: 40px;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+}
+
+footer {
+    background: #111;
+    color: white;
+    text-align: center;
+    padding: 30px;
+}
+
+.contact-form {
+    max-width: 500px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+input, textarea {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    padding: 12px;
+    border: none;
+    background: #c59d5f;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+button:hover {
+    background: #a67c3b;
+}
+
+@media(max-width: 768px) {
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .services {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+</style>
+</head>
+<body>
+
+<header>
+    <h1>SEBLARZ</h1>
+    <nav>
+        <a href="#home">Start</a>
+        <a href="#services">Oferta</a>
+        <a href="#contact">Kontakt</a>
+    </nav>
+</header>
+
+<section class="hero" id="home">
+    <div class="hero-content">
+        <h2>Meble na wymiar tworzone z pasją</h2>
+        <p>Kuchnie • Szafy • Garderoby • Zabudowy</p>
+        <a href="#contact" class="btn">Bezpłatna wycena</a>
+    </div>
+</section>
+
+<section class="section" id="services">
+    <h3>Nasza Oferta</h3>
+    <div class="services">
+        <div class="card">
+            <h4>Kuchnie na wymiar</h4>
+            <p>Projekt i realizacja funkcjonalnych oraz nowoczesnych kuchni.</p>
+        </div>
+        <div class="card">
+            <h4>Szafy i garderoby</h4>
+            <p>Indywidualne rozwiązania dopasowane do Twojej przestrzeni.</p>
+        </div>
+        <div class="card">
+            <h4>Zabudowy wnętrz</h4>
+            <p>Meble do salonu, łazienki, biura oraz innych pomieszczeń.</p>
+        </div>
+    </div>
+</section>
+
+<section class="section" id="contact">
+    <h3>Skontaktuj się z nami</h3>
+    <form class="contact-form">
+        <input type="text" placeholder="Imię i nazwisko" required>
+        <input type="email" placeholder="Adres e-mail" required>
+        <textarea rows="5" placeholder="Opisz swój projekt"></textarea>
+        <button type="submit">Wyślij zapytanie</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2026 SEBLARZ meble na wymiar Sebastian Mróz | Wszelkie prawa zastrzeżone</p>
+</footer>
+
+</body>
+</html>
