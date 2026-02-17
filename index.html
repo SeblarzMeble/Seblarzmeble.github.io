@@ -130,4 +130,137 @@
 
 </body>
 </html>
+Wysłano
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Meble na wymiar</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+        }
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+        }
+        .btn {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #27ae60;
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            margin-top: 20px;
+            border-radius: 5px;
+        }
+        section {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+        }
+        h2 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .gallery img {
+            width: calc(33% - 20px);
+            border-radius: 5px;
+        }
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 40px;
+        }
+        @media(max-width: 768px){
+            .gallery img {
+                width: calc(50% - 20px);
+            }
+        }
+        @media(max-width: 480px){
+            .gallery img {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Meble na wymiar</h1>
+    <p>Kuchnie • Szafy • Garderoby • Zabudowy</p>
+    <a href="#kontakt" class="btn">Zadzwoń teraz</a>
+</header>
+
+<section>
+    <h2>O naszej firmie</h2>
+    <p>Tworzymy meble na wymiar dopasowane do Twoich potrzeb. Stawiamy na jakość wykonania, trwałe materiały i indywidualne podejście do klienta. Działamy w Twoim mieście i okolicach, oferując profesjonalne doradztwo i montaż.</p>
+</section>
+
+<section>
+    <h2>Nasza oferta</h2>
+    <ul>
+        <li>Kuchnie na wymiar</li>
+        <li>Szafy przesuwne</li>
+        <li>Garderoby</li>
+        <li>Meble łazienkowe</li>
+        <li>Zabudowy biurowe</li>
+    </ul>
+</section>
+
+<section>
+    <h2>Galeria realizacji</h2>
+    <div class="gallery">
+        <img src="kuchnia1.jpg" alt="Kuchnia 1">
+        <img src="kuchnia2.jpg" alt="Kuchnia 2">
+        <img src="kuchnia3.jpg" alt="Kuchnia 3">
+        <!-- Dodaj kolejne zdjęcia jeśli chcesz -->
+    </div>
+</section>
+
+<section id="opinie">
+    <h2>Opinie klientów</h2>
+    <p>„Profesjonalna firma, świetna jakość mebli, montaż bez problemów!” – Anna K.</p>
+    <p>„Polecam! Kuchnia wygląda dokładnie tak, jak chciałem.” – Marek P.</p>
+    <p>„Szybko i solidnie. Bardzo dobry kontakt z klientem.” – Katarzyna S.</p>
+</section>
+
+<section id="kontakt">
+    <h2>Kontakt</h2>
+    <p><strong>Telefon:</strong> 574 717 941</p>
+    <p><strong>Email:</strong> kontakt@twojafirma.pl</p>
+    <p><strong>Obszar działania:</strong> Twoje miasto i okolice</p>
+    <a href="tel:574717941" class="btn">Zadzwoń teraz</a>
+    <a href="mailto:kontakt@twojafirma.pl" class="btn">Napisz email</a>
+</section>
+
+<footer>
+    © 2026 Meble na wymiar
+</footer>
+
+</body>
+</html>
 
